@@ -1,0 +1,40 @@
+<head>
+  <title>Bookle barcode scanner</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+</head>
+<body>
+{{> hello}}
+</body>
+
+<template name="hello">
+
+  <div class="container">
+
+    <form>
+    <div class="input-group input-group-lg">
+      <input id="location1" type="text" placeholder="Location" />
+      <button type="button" class="btn btn-primary btn-lg" id="scanner1">Scan</button>
+      <button id="submit2">Submit</button>
+      <p><strong>Text: {{text}}</strong></p>
+      <p>format: {{format}}</p>
+      <p>error: {{cancelled}}</p>
+      <p># books in location: {{booksinlocation}} </p>
+     </div>
+    </form>
+    <hr />
+    <form class="form-inline">
+      <input id="input1" type="text" placeholder="Enter ISBN" />
+      <button id="submit1">Submit</button>
+    </form>
+    <hr />
+    <p>Current book: {{title}}</p>
+    <hr />
+    <form>
+      <button type="button" class="btn btn-primary btn-lg" id="makecsv">Make CSV</button>
+    </form>
+    {{> locator}}
+{{log}}
+  </div> <!-- /container -->
+
+
+</template>
